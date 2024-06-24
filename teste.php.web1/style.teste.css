@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+
+
+
+
+/*estilo de texto*/
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+/*desing página*/
+
+*{
+
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+
+background-color: black;
+background-image: linear-gradient(#F3F0FA,#10141F);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+background-attachment: fixed;
+
+display: flex;
+
+}
+header, main, section, article {
+    max-width: 800px;
+}
+
+header > h1 {
+    color: #10141F;
+    text-shadow: 2px 2px 0px white;
+    
+
+}
+
+.nome{
+
+    color: brown;
+}
+
+
+

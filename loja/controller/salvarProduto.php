@@ -1,0 +1,50 @@
+<?php
+
+include_once("../dao/clsConexao.php");
+
+include_once("../dao/clsProdutoDAO.php");
+include_once("../model/clsProduto.php");
+
+//INSERIR PRODUTO
+
+if(isset($_REQUEST["inserir"])){
+    $nome = $_POST["txtNomeProduto"];
+    $descricao = $_POST["txtDescrProduto"];
+    $valor = $_POST["txtValorProduto"];
+    if(strlen($nome) == 0 ){
+        header("Location: ../produtos.php?nomeVazio");
+    }elseif(strlen($descricao) == 0 ){
+        header("Location: ../produtos.php?descricaoVazio"); 
+    }elseif(strlen($valor) == 0 ){
+        header("Location: ../produtos.php?valorVazio");        
+    }else{
+      
+        $produto = new Produto();
+        $produto->nome = $nome;
+        $produto->descricao = $descricao;
+        $produto->valor = $valor;
+
+        ProdutoDAO:: inserir($produto);
+        header("Location: ../produtos.php?nome=$nome");
+    }
+}
+
+// EXCLUIR PRODUTO
+
+if(isset($_REQUEST["excluir"]) && isset($_REQUEST["id"])){
+    $id = $_REQUEST["id"];
+    ProdutoDAO:: excluir($id);
+    header("Location: ../produtos.php?produtoExcluido");
+}
+
+// EDITAR PRODUTO
+
+if( isset( $_REQUEST["editar"] ) &&  isset( $_REQUEST["id"] ) ){
+    $id = $_REQUEST["id"] ;
+    $nome = $_POST["txtNomeProduto"];
+    $descricao = $_POST["txtDescrProduto"];
+    $valor = $_POST["txtValorProduto"];
+  
+    ProdutoDAO::editar($nome, $descricao, $valor, $id );
+    header( "Location: ../produtos.php?produtoEditado");
+}

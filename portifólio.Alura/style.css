@@ -1,0 +1,104 @@
+/* Só chamamos a fonte aqui, mas só larhar o link não funciona, pois tem que direcionar em qual lugar vamos
+usar. Então temos que ir na class que queremos e coloca-la la como
+"font-family: (nome que tem no google fonts). E pronto estaremos usando a fonte */
+/* As vezes o Google Fonts "acoplha" os links das fontes numa só, como fez aqui embaixo, por isso 
+também se coloca o "font-family: (nome que tem no google fonts), para colocar 
+as fontes que tem no link no lugar certo. */
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    /* isso é para deixar a página sem a "estrutura" padrão que é criado automáticamente pela própria página, 
+    deste modo conseguimos "ressetar" essas especificações automáticas.
+    Esse *{ pega todo o conteúdo dentro do site. 
+    Para resetar os padrões dos navegadores de forma simples utilizamos as propriedades margin, 
+    que define a área de margem nos quatro lados do elemento (cima, direita, baixo, esquerda), 
+    e padding, que define a área de preenchimento interna nos mesmos quatro lados do elemento, 
+    ambas com valor igual à 0.*/
+
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+/* importante deifinir a altura do body como 100vh para definir a altura do VIEWPORT
+(100 vh vem do código HTML com o nome viewport) para conseguirmos estilizar 
+a página que aparece na tela por inteira por conta do nosso site vir como padrão só a "metade"
+da tela para se estilizar */
+    box-sizing: border-box;
+/*border-box faz com que não corra riscos de elementos "filhos" não se sobresairem sobre os elementos "pais"
+ou que saem do body da página exemplo: <h1> é elemento pai do <p>*/
+    background-color: black;
+    /* color é para mudar a cor do texto*/
+    color: #F6F6F6;
+}
+
+
+.titulo-destaque{
+/*font-weight: bold; (Texto em negrito)
+color: 22D4FD; (Cor do texto azul)
+border: 1px solid 22D4FD; (Borda com 1 px de largura, do tipo sólida e cor da borda azul)
+padding: 10px; (Espaçamento interno de 10px) distancia entre o elemento que é texto e a borda da página.*/
+
+    color: #22D4FD;
+    
+
+}
+
+
+.apresentacao{
+/* Chamamos a classe que definimos no HTML e usamos o display flex para ajeitar os elementos e
+o aling-items center é para alinhar os elementos no meio da tela.*/
+    display: flex;
+/* margin coloca margem fora dos elementos distanciado-os das bordas da tela */
+    margin: 10%;
+    align-items: center;
+/* justify-content tira os espaços "desnecessários" dentro do site.*/
+    justify-content: space-between;
+
+    
+}
+
+.apresentacao__conteudo{
+    width: 615px;
+}
+
+
+.apresentacao__conteudo__titulo{
+    font-size: 36px;
+    font-family: "Krona One", sans-serif;
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.apresentacao__links{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.apresentacao__links__link{
+    background-color: #22D4FD ;
+    width: 280px;
+/* text-aling é para centralizar o texto */
+    text-align: center;
+/* border-radiu é para arredondar a borda */
+    border-radius: 16px;
+    font-size: 24px;
+/* no padding se colocarmos só um valor vai corresnpoder para todos os lados, mas podemos colocar 
+dois valores sendo que o primeiro valor sempre é do eixo vertical e o segundo valor do eixo horizontal,
+como queremos só alinhar os eixos verticais vamos dar um valor só pro primeiro e o segundo colocamos zero. */
+    padding: 21.5px 0;
+/* para tirar a liha de baixo do link usamos o text-decoretion: none */
+    text-decoration: none;
+/* color muda a cor do texto */
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+/* font-weight é para mudar o peso da fonte */
+    font-weight: 600;
+}
