@@ -52,7 +52,7 @@ padding: 10px; (Espaçamento interno de 10px) distancia entre o elemento que é 
 o aling-items center é para alinhar os elementos no meio da tela.*/
     display: flex;
 /* margin coloca margem fora dos elementos distanciado-os das bordas da tela */
-    margin: 10%;
+    margin: 10% 15%;
     align-items: center;
 /* justify-content tira os espaços "desnecessários" dentro do site.*/
     justify-content: space-between;
@@ -62,6 +62,10 @@ o aling-items center é para alinhar os elementos no meio da tela.*/
 
 .apresentacao__conteudo{
     width: 615px;
+    display: flex;
+    flex-direction: column;
+/* gap é utilizado para dar espaçamento entre os elementos filhos */
+    gap: 40px;
 }
 
 
