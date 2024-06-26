@@ -40,8 +40,13 @@ ou que saem do body da página exemplo: <h1> é elemento pai do <p>*/
 color: 22D4FD; (Cor do texto azul)
 border: 1px solid 22D4FD; (Borda com 1 px de largura, do tipo sólida e cor da borda azul)
 padding: 10px; (Espaçamento interno de 10px) distancia entre o elemento que é texto e a borda da página.*/
-
+    border: 1px solid;
+    border-radius: 5px;
+    display: flex;
+    padding: 5px;
     color: #22D4FD;
+    margin-top: 15px;
+
     
 
 }
@@ -54,7 +59,7 @@ o aling-items center é para alinhar os elementos no meio da tela.*/
 /* margin coloca margem fora dos elementos distanciado-os das bordas da tela */
     margin: 10% 15%;
     align-items: center;
-/* justify-content tira os espaços "desnecessários" dentro do site.*/
+    /* justify-content tira os espaços "desnecessários" dentro do site.*/
     justify-content: space-between;
 
     
@@ -66,12 +71,14 @@ o aling-items center é para alinhar os elementos no meio da tela.*/
     flex-direction: column;
 /* gap é utilizado para dar espaçamento entre os elementos filhos */
     gap: 40px;
+    
 }
 
 
 .apresentacao__conteudo__titulo{
     font-size: 36px;
     font-family: "Krona One", sans-serif;
+    
 }
 
 .apresentacao__conteudo__texto{
@@ -80,10 +87,13 @@ o aling-items center é para alinhar os elementos no meio da tela.*/
 
 }
 
+
 .apresentacao__links{
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
+
 
 
 .apresentacao__links__link{
@@ -94,6 +104,7 @@ o aling-items center é para alinhar os elementos no meio da tela.*/
 /* border-radiu é para arredondar a borda */
     border-radius: 16px;
     font-size: 24px;
+    border-color: #22D4FD;
 /* no padding se colocarmos só um valor vai corresnpoder para todos os lados, mas podemos colocar 
 dois valores sendo que o primeiro valor sempre é do eixo vertical e o segundo valor do eixo horizontal,
 como queremos só alinhar os eixos verticais vamos dar um valor só pro primeiro e o segundo colocamos zero. */
@@ -105,4 +116,60 @@ como queremos só alinhar os eixos verticais vamos dar um valor só pro primeiro
     font-family: "Montserrat", sans-serif;
 /* font-weight é para mudar o peso da fonte */
     font-weight: 600;
+    margin: 3px;
 }
+
+
+.apresentacao__foto{
+    display: flex;
+    padding-left: 10%;
+
+}
+
+img{
+    border-radius: 8px;
+
+}
+
+@keyframes desaparecer {
+    from {color: black;}
+    to {color: white;}
+
+    0%   {color:black; }
+    18%  {color: black; }
+    30%  {color:white; }
+    50%  {color:white; }
+    75%  {color:white; }
+    100% {color:black; }
+  }
+
+header{
+    justify-content: space-between;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: #000000;
+    padding: 16px;
+    font-size: 30px;
+    font-weight: 600;
+    border: solid 2px;
+    border-radius: 3px;
+    background-color: #000000;
+    border-color: #000000;
+    animation-name: desaparecer;
+    animation-duration: 7s;
+   
+
+}
+
+footer{
+    justify-content: space-between;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px #000000;
+    padding-top: 5px;
+    background-color: lightslategray;
+}
+
+
